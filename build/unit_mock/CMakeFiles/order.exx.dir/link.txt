@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/order.exx.dir/main.cpp.o  -o order.exx -rdynamic ../lib/libgmock.a ../lib/libgtest.a -lpthread 

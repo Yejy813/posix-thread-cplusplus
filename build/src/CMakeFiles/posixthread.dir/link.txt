@@ -1,0 +1,2 @@
+/usr/bin/ar cq libposixthread.a  CMakeFiles/posixthread.dir/CountDownLatch.cpp.o CMakeFiles/posixthread.dir/posix_port.cpp.o CMakeFiles/posixthread.dir/posix_thread.cpp.o
+/usr/bin/ranlib libposixthread.a

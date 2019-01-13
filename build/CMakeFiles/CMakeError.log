@@ -1,0 +1,51 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/willy/myshare/thread-pool/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_d23f6/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_d23f6.dir/build.make CMakeFiles/cmTC_d23f6.dir/build
+gmake[1]: 进入目录“/home/willy/myshare/thread-pool/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_d23f6.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_d23f6.dir/CheckSymbolExists.c.o   -c /home/willy/myshare/thread-pool/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_d23f6
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d23f6.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_d23f6.dir/CheckSymbolExists.c.o  -o cmTC_d23f6 -rdynamic 
+CMakeFiles/cmTC_d23f6.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0x16)：对‘pthread_create’未定义的引用
+collect2: 错误：ld 返回 1
+gmake[1]: 离开目录“/home/willy/myshare/thread-pool/build/CMakeFiles/CMakeTmp”
+gmake[1]: *** [cmTC_d23f6] 错误 1
+gmake: *** [cmTC_d23f6/fast] 错误 2
+
+File /home/willy/myshare/thread-pool/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/willy/myshare/thread-pool/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/gmake" "cmTC_a003d/fast"
+/usr/bin/gmake -f CMakeFiles/cmTC_a003d.dir/build.make CMakeFiles/cmTC_a003d.dir/build
+gmake[1]: 进入目录“/home/willy/myshare/thread-pool/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_a003d.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_a003d.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.3/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a003d
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a003d.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_a003d.dir/CheckFunctionExists.c.o  -o cmTC_a003d -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: 错误：ld 返回 1
+gmake[1]: 离开目录“/home/willy/myshare/thread-pool/build/CMakeFiles/CMakeTmp”
+gmake[1]: *** [cmTC_a003d] 错误 1
+gmake: *** [cmTC_a003d/fast] 错误 2
+
+

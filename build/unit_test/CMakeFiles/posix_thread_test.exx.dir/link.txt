@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/posix_thread_test.exx.dir/main.cpp.o CMakeFiles/posix_thread_test.exx.dir/thread_test.cpp.o  -o posix_thread_test.exx -rdynamic ../lib/libgtest.a ../src/libposixthread.a -lpthread -lpthread -lrt 
